@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trädgårdsskötsel i Solna &amp; Stockholm | SS Trädgårdsservice AB</title>
+  <meta name="description" content="SS Trädgårdsservice AB — professionell trädgårdsskötsel i Solna och Stockholm sedan 2005. Skötselavtal för BRF, fastighetsbolag och villaägare. Begär kostnadsfri offert!">
+  <meta name="theme-color" content="#1E4D2B">
+  <!-- Byt till er riktiga domän vid lansering -->
+  <link rel="canonical" href="https://www.sstradgardsservice.se/">
+
+  <!-- Favicon: bladikon (inline SVG, inga externa anrop) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%23FAF8F3'/%3E%3Cpath d='M12 3C8 6.5 5.5 10 5.5 13.2A6.5 6.5 0 0 0 12 19.5a6.5 6.5 0 0 0 6.5-6.3C18.5 10 16 6.5 12 3Z' fill='%231E4D2B'/%3E%3Cpath d='M12 7.5v9M12 10.5l2.8-2M12 13.2 9.2 11.4' stroke='%23A8BFA0' stroke-width='1.2' stroke-linecap='round'/%3E%3C/svg%3E">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Trädgårdsskötsel i Solna &amp; Stockholm | SS Trädgårdsservice AB">
+  <meta property="og:description" content="Professionell trädgårdsskötsel året runt — sedan 2005. Skötselavtal för BRF, företag och privatpersoner i Solna och Stockholm.">
+  <meta property="og:locale" content="sv_SE">
+  <meta property="og:site_name" content="SS Trädgårdsservice AB">
+  <!-- OG-BILD PLACEHOLDER: byt till riktig bild-URL (1200x630) vid lansering -->
+  <meta property="og:image" content="https://www.sstradgardsservice.se/bilder/og.jpg">
+
+  <!-- JSON-LD LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "SS Trädgårdsservice AB",
+    "description": "Professionell trädgårdsskötsel, beskärning, plantering och snöröjning i Solna och Stockholm sedan 2005.",
+    "telephone": "+46733320653",
+    "foundingDate": "2005",
+    "numberOfEmployees": { "@type": "QuantitativeValue", "value": 17 },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Virebergsvägen 15",
+      "postalCode": "169 30",
+      "addressLocality": "Solna",
+      "addressCountry": "SE"
+    },
+    "areaServed": ["Solna", "Stockholm"],
+    "vatID": "SE556690478401",
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "07:00",
+      "closes": "16:00"
+    },
+    "priceRange": "$$"
+  }
+  </script>
+
+  <!-- Google Fonts: Fraunces (rubriker) + Inter (brödtext) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ============================================================
+       SS TRÄDGÅRDSSERVICE AB — DESIGNSYSTEM
+       Färger: skogsgrön / varm off-white / salvia / dov guld
+       ============================================================ */
+    :root {
+      --green:       #1E4D2B;   /* primär, djup skogsgrön */
+      --green-dark:  #163B21;   /* mörkare nyans för hover/footer */
+      --green-deep:  #0F2A17;   /* nästan svart grön, overlays */
+      --cream:       #FAF8F3;   /* varm off-white bakgrund */
+      --cream-dark:  #F1EDE3;   /* sektionsvariation */
+      --sage:        #A8BFA0;   /* mjuk salvia, accenter */
+      --sage-light:  #DCE5D7;   /* ljus salvia, bakgrundsdetaljer */
+      --gold:        #D9A441;   /* dov guld, CTA */
+      --gold-dark:   #C08F2E;   /* guld hover */
+      --ink:         #22301F;   /* brödtext, hög kontrast på cream */
+      --ink-soft:    #4C5947;   /* sekundär text (AA på cream) */
+      --white:       #FFFFFF;
+
+      --radius-lg: 24px;
+      --radius-md: 16px;
+      --radius-sm: 10px;
+      --shadow-soft: 0 8px 30px rgba(30, 77, 43, 0.08);
+      --shadow-lift: 0 16px 40px rgba(30, 77, 43, 0.14);
+      --font-head: "Fraunces", Georgia, serif;
+      --font-body: "Inter", -apple-system, "Segoe UI", sans-serif;
+      --header-h: 76px;
+
+      /* z-index-skala */
+      --z-header: 50;
+      --z-menu: 40;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) + 12px); }
+
+    body {
+      font-family: var(--font-body);
+      font-size: 1rem;
+      line-height: 1.65;
+      color: var(--ink);
+      background: var(--cream);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3 { font-family: var(--font-head); font-weight: 600; line-height: 1.15; color: var(--green); }
+
+    img { max-width: 100%; display: block; }
+
+    a { color: var(--green); }
+
+    /* Synliga fokusmarkeringar (tangentbordsnavigering) */
+    :focus-visible {
+      outline: 3px solid var(--gold);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    .skip-link {
+      position: absolute; left: -9999px; top: 0;
+      background: var(--green); color: #fff; padding: .75rem 1.25rem;
+      z-index: 100; border-radius: 0 0 var(--radius-sm) 0; text-decoration: none;
+    }
+    .skip-link:focus { left: 0; }
+
+    .container { width: min(1140px, 100% - 2.5rem); margin-inline: auto; }
+
+    section { padding: clamp(4rem, 9vw, 7rem) 0; position: relative; }
+
+    .section-eyebrow {
+      display: inline-flex; align-items: center; gap: .5rem;
+      font-size: .85rem; font-weight: 600; letter-spacing: .12em;
+      text-transform: uppercase; color: var(--ink-soft); margin-bottom: 1rem;
+    }
+    .section-eyebrow svg { color: var(--sage); flex: none; }
+
+    .section-title { font-size: clamp(1.9rem, 4.2vw, 2.75rem); margin-bottom: 1rem; text-wrap: balance; }
+    .section-intro { max-width: 42rem; color: var(--ink-soft); font-size: 1.06rem; }
+
+    /* ---------- Knappar ---------- */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: .55rem;
+      min-height: 48px; padding: .8rem 1.7rem;
+      font-family: var(--font-body); font-size: 1rem; font-weight: 600;
+      border-radius: 999px; border: 2px solid transparent;
+      cursor: pointer; text-decoration: none;
+      transition: background-color .2s ease, color .2s ease, border-color .2s ease, box-shadow .2s ease;
+    }
+    .btn svg { flex: none; }
+    .btn-primary {
+      background: var(--gold); color: var(--green-deep);
+      box-shadow: 0 6px 18px rgba(217, 164, 65, .35);
+    }
+    .btn-primary:hover { background: var(--gold-dark); box-shadow: 0 8px 22px rgba(217, 164, 65, .45); }
+    .btn-outline-light { background: transparent; color: #fff; border-color: rgba(255,255,255,.65); }
+    .btn-outline-light:hover { background: rgba(255,255,255,.14); border-color: #fff; }
+    .btn-green { background: var(--green); color: #fff; }
+    .btn-green:hover { background: var(--green-dark); }
+
+    /* ---------- Scroll-reveal ---------- */
+    .reveal { opacity: 0; transform: translateY(26px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.is-visible { opacity: 1; transform: none; }
+    .reveal-d1 { transition-delay: .1s; }
+    .reveal-d2 { transition-delay: .2s; }
+    .reveal-d3 { transition-delay: .3s; }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .reveal { opacity: 1; transform: none; transition: none; }
+      *, *::before, *::after { animation: none !important; transition-duration: .01ms !important; }
+    }
+
+    /* ============================================================
+       HEADER
+       ============================================================ */
+    .site-header {
+      position: sticky; top: 0; z-index: var(--z-header);
+      background: rgba(250, 248, 243, .92);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      transition: box-shadow .25s ease;
+    }
+    .site-header.is-scrolled { box-shadow: 0 2px 20px rgba(30, 77, 43, .1); }
+
+    .header-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 1rem; min-height: var(--header-h);
+    }
+
+    .brand {
+      display: inline-flex; align-items: center; gap: .6rem;
+      font-family: var(--font-head); font-size: 1.28rem; font-weight: 700;
+      color: var(--green); text-decoration: none; letter-spacing: -.01em;
+    }
+    .brand svg { flex: none; }
+
+    .main-nav ul { display: flex; gap: .25rem; list-style: none; }
+    .main-nav a {
+      display: inline-block; padding: .6rem .9rem;
+      font-weight: 500; font-size: .97rem; color: var(--ink);
+      text-decoration: none; border-radius: 999px;
+      transition: background-color .2s ease, color .2s ease;
+    }
+    .main-nav a:hover { background: var(--sage-light); color: var(--green); }
+
+    .header-cta { display: inline-flex; }
+    .header-cta .btn { min-height: 44px; padding: .6rem 1.3rem; font-size: .95rem; }
+
+    .nav-toggle {
+      display: none; width: 48px; height: 48px;
+      align-items: center; justify-content: center;
+      background: none; border: none; cursor: pointer;
+      color: var(--green); border-radius: var(--radius-sm);
+    }
+
+    @media (max-width: 860px) {
+      .main-nav {
+        position: fixed; inset: var(--header-h) 0 auto 0; z-index: var(--z-menu);
+        background: var(--cream);
+        box-shadow: 0 20px 30px rgba(30,77,43,.12);
+        padding: 1rem 1.25rem 1.5rem;
+        transform: translateY(-115%);
+        transition: transform .3s ease;
+        border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+      }
+      .main-nav.is-open { transform: translateY(0); }
+      .main-nav ul { flex-direction: column; gap: .25rem; }
+      .main-nav a { display: block; padding: .85rem 1rem; font-size: 1.05rem; }
+      .nav-toggle { display: inline-flex; }
+      .header-cta span.cta-label { display: none; }   /* endast lur-ikon på mobil */
+      .header-cta .btn { padding: .6rem .8rem; }
+    }
+
+    /* ============================================================
+       HERO
+       ============================================================ */
+    .hero {
+      position: relative; min-height: 100svh;
+      display: flex; align-items: center;
+      padding: calc(var(--header-h) + 2rem) 0 7rem;
+      margin-top: calc(-1 * var(--header-h));
+      color: #fff; overflow: hidden;
+    }
+    .hero-media { position: absolute; inset: 0; z-index: -2; }
+    .hero-media img { width: 100%; height: 100%; object-fit: cover; }
+    .hero-media .hero-scene { width: 100%; height: 100%; display: block; }
+    .hero::before {
+      content: ""; position: absolute; inset: 0; z-index: -1;
+      background: linear-gradient(115deg, rgba(15, 42, 23, .82) 0%, rgba(15, 42, 23, .55) 55%, rgba(15, 42, 23, .3) 100%);
+    }
+
+    .hero-content { max-width: 40rem; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: .5rem;
+      background: rgba(250, 248, 243, .14); border: 1px solid rgba(250,248,243,.3);
+      color: #fff; font-size: .85rem; font-weight: 500;
+      padding: .45rem 1rem; border-radius: 999px; margin-bottom: 1.5rem;
+      backdrop-filter: blur(4px);
+    }
+    .hero-badge svg { color: var(--gold); }
+
+    .hero h1 {
+      font-size: clamp(2.4rem, 6vw, 4rem);
+      color: #fff; margin-bottom: 1.25rem; text-wrap: balance;
+    }
+    .hero h1 em { font-style: italic; color: var(--sage); }
+
+    .hero-sub { font-size: clamp(1.05rem, 2vw, 1.2rem); color: rgba(250,248,243,.9); max-width: 34rem; margin-bottom: 2.25rem; }
+
+    .hero-actions { display: flex; flex-wrap: wrap; gap: .9rem; margin-bottom: 2.75rem; }
+
+    .hero-trust {
+      display: flex; flex-wrap: wrap; gap: .5rem 1.75rem;
+      font-size: .92rem; color: rgba(250,248,243,.85); font-weight: 500;
+    }
+    .hero-trust li { display: inline-flex; align-items: center; gap: .5rem; list-style: none; }
+    .hero-trust svg { color: var(--gold); flex: none; }
+
+    /* Kurvad avdelare i botten av hero */
+    .hero-curve { position: absolute; left: 0; right: 0; bottom: -1px; line-height: 0; }
+    .hero-curve svg { width: 100%; height: clamp(40px, 8vw, 90px); display: block; }
+
+    /* ============================================================
+       TJÄNSTER
+       ============================================================ */
+    .services { background: var(--cream); }
+    .services-grid {
+      display: grid; gap: 1.5rem; margin-top: 3rem;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    }
+    .service-card {
+      position: relative; overflow: hidden; isolation: isolate;
+      min-height: 340px; display: flex; flex-direction: column;
+      border-radius: var(--radius-lg); padding: 1.75rem;
+      box-shadow: var(--shadow-soft); color: #fff;
+      transition: box-shadow .25s ease, transform .25s ease;
+    }
+    .service-card:hover { box-shadow: var(--shadow-lift); transform: translateY(-4px); }
+    /* Inbäddad bakgrundsillustration per tjänst */
+    .service-bg {
+      position: absolute; inset: 0; z-index: 0;
+      width: 100%; height: 100%; display: block; object-fit: cover;
+      transition: transform .5s ease;
+    }
+    .service-card:hover .service-bg { transform: scale(1.06); }
+    .service-card::after {
+      content: ""; position: absolute; inset: 0; z-index: 1;
+      background: linear-gradient(to top, rgba(15,42,23,.94) 6%, rgba(15,42,23,.55) 46%, rgba(15,42,23,.12) 100%);
+    }
+    .service-icon {
+      position: relative; z-index: 2;
+      width: 52px; height: 52px; border-radius: var(--radius-md);
+      display: inline-flex; align-items: center; justify-content: center;
+      background: var(--gold); color: var(--green-deep);
+      margin-bottom: auto; box-shadow: 0 4px 14px rgba(15,42,23,.35);
+    }
+    .service-card h3 { position: relative; z-index: 2; color: #fff; font-size: 1.28rem; margin: 1.25rem 0 .5rem; text-shadow: 0 1px 12px rgba(15,42,23,.55); }
+    .service-card p { position: relative; z-index: 2; color: rgba(250,248,243,.92); font-size: .96rem; text-shadow: 0 1px 10px rgba(15,42,23,.55); }
+
+    /* ============================================================
+       VARFÖR VÄLJA OSS
+       ============================================================ */
+    .why { background: var(--green); color: #fff; overflow: hidden; }
+    .why .section-eyebrow { color: var(--sage); }
+    .why .section-title { color: #fff; }
+    .why .section-intro { color: rgba(250,248,243,.8); }
+    .why-grid {
+      display: grid; gap: 2rem; margin-top: 3.25rem;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    }
+    .why-item { border-top: 2px solid rgba(168,191,160,.4); padding-top: 1.5rem; }
+    .why-number {
+      font-family: var(--font-head); font-size: clamp(2.2rem, 4vw, 3rem);
+      font-weight: 700; color: var(--gold); line-height: 1; margin-bottom: .5rem;
+    }
+    .why-item h3 { color: #fff; font-size: 1.15rem; margin-bottom: .4rem; }
+    .why-item p { color: rgba(250,248,243,.78); font-size: .95rem; }
+
+    /* dekorativt blad i hörnet */
+    .why-leaf { position: absolute; right: -60px; top: -40px; width: 280px; opacity: .1; pointer-events: none; }
+
+    /* ============================================================
+       SÅ FUNKAR DET
+       ============================================================ */
+    .steps { background: var(--cream-dark); }
+    .steps-grid {
+      display: grid; gap: 1.5rem; margin-top: 3rem; counter-reset: step;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+    .step-card {
+      background: var(--white); border-radius: var(--radius-lg);
+      padding: 2.25rem 1.75rem; box-shadow: var(--shadow-soft); position: relative;
+    }
+    .step-num {
+      width: 44px; height: 44px; border-radius: 50%;
+      display: inline-flex; align-items: center; justify-content: center;
+      background: var(--green); color: var(--gold);
+      font-family: var(--font-head); font-size: 1.2rem; font-weight: 700;
+      margin-bottom: 1.1rem;
+    }
+    .step-card h3 { font-size: 1.25rem; margin-bottom: .5rem; }
+    .step-card p { color: var(--ink-soft); font-size: .97rem; }
+
+    /* ============================================================
+       REFERENSER
+       ============================================================ */
+    .testimonials-grid {
+      display: grid; gap: 1.5rem; margin-top: 3rem;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    }
+    .testimonial {
+      background: var(--white); border-radius: var(--radius-lg);
+      padding: 2rem 1.75rem; box-shadow: var(--shadow-soft);
+      display: flex; flex-direction: column; gap: 1.25rem;
+      border: 1px solid rgba(168, 191, 160, .25);
+    }
+    .testimonial blockquote { font-size: 1.02rem; color: var(--ink); flex: 1; }
+    .testimonial blockquote::before { content: "”"; display: block; font-family: var(--font-head); font-size: 3rem; line-height: .6; color: var(--sage); margin-bottom: .75rem; }
+    .testimonial figcaption { display: flex; align-items: center; gap: .9rem; }
+    .avatar {
+      width: 48px; height: 48px; border-radius: 50%; flex: none;
+      display: inline-flex; align-items: center; justify-content: center;
+      background: var(--sage-light); color: var(--green);
+      font-weight: 700; font-family: var(--font-head); font-size: 1.05rem;
+    }
+    .testimonial cite { font-style: normal; font-weight: 600; display: block; font-size: .97rem; }
+    .testimonial .role { color: var(--ink-soft); font-size: .87rem; }
+    .stars { display: inline-flex; gap: 2px; color: var(--gold); }
+
+    /* ============================================================
+       OM OSS
+       ============================================================ */
+    .about { background: var(--cream-dark); overflow: hidden; }
+    .about-grid {
+      display: grid; gap: 3rem; align-items: center;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 900px) { .about-grid { grid-template-columns: 1fr 1fr; gap: 4.5rem; } }
+    .about-media { position: relative; }
+    .about-media img, .about-media .about-scene {
+      border-radius: var(--radius-lg); box-shadow: var(--shadow-lift);
+      width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; display: block;
+    }
+    .about-media::after {
+      content: ""; position: absolute; z-index: -1;
+      inset: 1.5rem -1.5rem -1.5rem 1.5rem;
+      background: var(--sage-light); border-radius: var(--radius-lg);
+    }
+    .about-text p { color: var(--ink-soft); margin-bottom: 1.1rem; }
+    .about-badges { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1.5rem; }
+    .badge-pill {
+      display: inline-flex; align-items: center; gap: .5rem;
+      background: var(--white); border: 1px solid var(--sage);
+      color: var(--green); font-size: .88rem; font-weight: 600;
+      padding: .5rem 1rem; border-radius: 999px;
+    }
+    .badge-pill svg { color: var(--gold); flex: none; }
+
+    /* ============================================================
+       CTA-BAND
+       ============================================================ */
+    .cta-band { background: var(--green); color: #fff; text-align: center; overflow: hidden; }
+    .cta-band h2 { color: #fff; font-size: clamp(1.8rem, 4vw, 2.6rem); max-width: 34rem; margin: 0 auto 1rem; text-wrap: balance; }
+    .cta-band p { color: rgba(250,248,243,.82); max-width: 30rem; margin: 0 auto 2rem; }
+    .cta-band .leaf-l, .cta-band .leaf-r { position: absolute; width: 220px; opacity: .12; pointer-events: none; }
+    .cta-band .leaf-l { left: -50px; bottom: -40px; transform: rotate(15deg); }
+    .cta-band .leaf-r { right: -50px; top: -40px; transform: rotate(195deg); }
+
+    /* ============================================================
+       KONTAKT
+       ============================================================ */
+    .contact-grid {
+      display: grid; gap: 2.5rem; margin-top: 3rem;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 960px) { .contact-grid { grid-template-columns: 1.15fr .85fr; gap: 3.5rem; } }
+
+    .contact-form {
+      background: var(--white); border-radius: var(--radius-lg);
+      padding: clamp(1.5rem, 4vw, 2.5rem); box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(168,191,160,.25);
+    }
+    .form-row { display: grid; gap: 1.1rem; grid-template-columns: 1fr; margin-bottom: 1.1rem; }
+    @media (min-width: 560px) { .form-row.two { grid-template-columns: 1fr 1fr; } }
+
+    .field label { display: block; font-weight: 600; font-size: .92rem; margin-bottom: .4rem; }
+    .field input, .field select, .field textarea {
+      width: 100%; min-height: 48px;
+      padding: .75rem 1rem;
+      font: inherit; color: var(--ink);
+      background: var(--cream);
+      border: 1.5px solid #D8D2C4; border-radius: var(--radius-sm);
+      transition: border-color .2s ease, box-shadow .2s ease;
+    }
+    .field textarea { min-height: 130px; resize: vertical; }
+    .field input:focus, .field select:focus, .field textarea:focus {
+      outline: none; border-color: var(--green);
+      box-shadow: 0 0 0 3px rgba(30, 77, 43, .15);
+    }
+    .field.has-error input, .field.has-error select, .field.has-error textarea { border-color: #B3261E; }
+    .field-error { display: none; color: #B3261E; font-size: .85rem; margin-top: .35rem; font-weight: 500; }
+    .field.has-error .field-error { display: block; }
+
+    .form-status { margin-top: 1rem; font-weight: 600; display: none; }
+    .form-status.success { display: block; color: var(--green); }
+
+    .contact-aside { display: flex; flex-direction: column; gap: 1.5rem; }
+    .contact-card {
+      background: var(--green); color: #fff;
+      border-radius: var(--radius-lg); padding: 2rem 1.75rem;
+    }
+    .contact-card h3 { color: #fff; font-size: 1.3rem; margin-bottom: 1.25rem; }
+    .contact-list { list-style: none; display: flex; flex-direction: column; gap: 1rem; }
+    .contact-list li { display: flex; gap: .9rem; align-items: flex-start; font-size: .97rem; }
+    .contact-list svg { color: var(--gold); flex: none; margin-top: 2px; }
+    .contact-list a { color: #fff; text-decoration: none; font-weight: 600; }
+    .contact-list a:hover { text-decoration: underline; }
+    .contact-list .sub { color: rgba(250,248,243,.75); font-size: .88rem; display: block; }
+
+    .map-wrap {
+      border-radius: var(--radius-lg); overflow: hidden;
+      box-shadow: var(--shadow-soft); border: 1px solid rgba(168,191,160,.25);
+      line-height: 0; flex: 1; min-height: 260px;
+    }
+    .map-wrap iframe { width: 100%; height: 100%; min-height: 260px; border: 0; }
+
+    /* ============================================================
+       FOOTER
+       ============================================================ */
+    .site-footer { background: var(--green-deep); color: rgba(250,248,243,.8); padding: 4rem 0 2rem; }
+    .footer-grid {
+      display: grid; gap: 2.5rem; margin-bottom: 3rem;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+    .site-footer h3 { color: #fff; font-size: 1.05rem; font-family: var(--font-body); font-weight: 700; margin-bottom: 1rem; letter-spacing: .02em; }
+    .site-footer .brand { color: #fff; margin-bottom: .75rem; }
+    .site-footer p, .site-footer li { font-size: .93rem; }
+    .site-footer ul { list-style: none; display: flex; flex-direction: column; gap: .55rem; }
+    .site-footer a { color: rgba(250,248,243,.8); text-decoration: none; transition: color .2s ease; }
+    .site-footer a:hover { color: var(--gold); }
+    .footer-bottom {
+      border-top: 1px solid rgba(250,248,243,.15);
+      padding-top: 1.5rem; display: flex; flex-wrap: wrap; gap: .75rem;
+      justify-content: space-between; font-size: .85rem; color: rgba(250,248,243,.6);
+    }
+  </style>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Hoppa till innehåll</a>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="site-header" id="header">
+    <div class="container header-inner">
+      <a href="#top" class="brand" aria-label="SS Trädgårdsservice — till startsidan">
+        <!-- Logotyp: bladikon -->
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M12 2C7 6 4 10.5 4 14.5A8 8 0 0 0 12 22a8 8 0 0 0 8-7.5C20 10.5 17 6 12 2Z" fill="#1E4D2B"/>
+          <path d="M12 7v12M12 11l3.5-2.5M12 14.5 8.5 12" stroke="#A8BFA0" stroke-width="1.4" stroke-linecap="round"/>
+        </svg>
+        SS Trädgårdsservice
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Huvudmeny">
+        <ul>
+          <li><a href="#tjanster">Tjänster</a></li>
+          <li><a href="#om-oss">Om oss</a></li>
+          <li><a href="#referenser">Referenser</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </nav>
+
+      <div style="display:flex; align-items:center; gap:.5rem;">
+        <a href="tel:+46733320653" class="btn btn-green header-cta" aria-label="Ring oss på 073-332 06 53">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span class="cta-label">073-332 06 53</span>
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Öppna menyn">
+          <svg id="iconMenu" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+          <svg id="iconClose" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="display:none" aria-hidden="true"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ==================== HERO ==================== -->
+    <section class="hero" id="top" aria-label="Introduktion">
+      <div class="hero-media">
+        <!-- HERO-BILD: bilder/hero.jpg (byt filen för att uppdatera bilden) -->
+        <img id="hero-img" src="bilder/hero.jpg"
+             alt="Trädgårdsarbetare klipper gräsmattan framför en modern villa i Solna"
+             fetchpriority="high">
+      </div>
+
+      <div class="container">
+        <div class="hero-content">
+          <span class="hero-badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.6 6.6L21 9.3l-5 4.4 1.5 6.8L12 16.9 6.5 20.5 8 13.7 3 9.3l6.4-.7L12 2z"/></svg>
+            Grundat 2005 — 20+ år i branschen
+          </span>
+
+          <h1>Vi tar hand om din trädgård — <em>året runt</em></h1>
+
+          <p class="hero-sub">
+            Med över 20 års erfarenhet av trädgårdsskötsel i Solna och Stockholm hjälper vi
+            bostadsrättsföreningar, fastighetsägare och villaägare att hålla utemiljön
+            grönskande — säsong efter säsong.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#kontakt" class="btn btn-primary">
+              Begär offert
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a href="tel:+46733320653" class="btn btn-outline-light">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              Ring oss
+            </a>
+          </div>
+
+          <ul class="hero-trust" aria-label="Snabbfakta om företaget">
+            <li>
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+              20+ år i branschen
+            </li>
+            <li>
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+              17 anställda
+            </li>
+            <li>
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+              F-skattsedel
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Kurvad avdelare mot nästa sektion -->
+      <div class="hero-curve" aria-hidden="true">
+        <svg viewBox="0 0 1440 90" preserveAspectRatio="none">
+          <path d="M0,60 C240,100 480,10 720,30 C960,50 1200,90 1440,50 L1440,90 L0,90 Z" fill="#FAF8F3"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ==================== TJÄNSTER ==================== -->
+    <section class="services" id="tjanster" aria-labelledby="tjanster-title">
+      <div class="container">
+        <div class="reveal">
+          <span class="section-eyebrow">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C7 6 4 10.5 4 14.5A8 8 0 0 0 12 22a8 8 0 0 0 8-7.5C20 10.5 17 6 12 2Z"/></svg>
+            Våra tjänster
+          </span>
+          <h2 class="section-title" id="tjanster-title">Allt din utemiljö behöver — under ett tak</h2>
+          <p class="section-intro">
+            Från löpande skötsel till större anläggningsprojekt. Vi arbetar med fasta avtal
+            och enstaka uppdrag för BRF:er, företag och privatpersoner.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card reveal">
+            <img class="service-bg" src="bilder/service-1.jpg"
+                 alt="Nyklippt randig gräsmatta bredvid en formklippt häck" loading="lazy">
+            <div class="service-icon" aria-hidden="true">
+              <!-- Sax/klippning -->
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M8.6 7.9 20 19M8.6 16.1 20 5M12 12l-1.5 1.5"/></svg>
+            </div>
+            <h3>Trädgårdsskötsel &amp; underhåll</h3>
+            <p>Gräsklippning, häckklippning, ogräsrensning och skötsel av rabatter. Löpande underhåll som håller trädgården i toppskick hela säsongen.</p>
+          </article>
+
+          <article class="service-card reveal reveal-d1">
+            <img class="service-bg" src="bilder/service-2.jpg"
+                 alt="Beskärning av äppelträd med stege i en trädgård" loading="lazy">
+            <div class="service-icon" aria-hidden="true">
+              <!-- Träd -->
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22v-7"/><path d="M12 15a6 6 0 0 0 6-6c0-3-2.5-6.5-6-7-3.5.5-6 4-6 7a6 6 0 0 0 6 6Z"/><path d="M12 11l2.5-2M12 13 9.5 11"/></svg>
+            </div>
+            <h3>Beskärning &amp; trädvård</h3>
+            <p>Professionell beskärning av träd, fruktträd och buskar vid rätt tidpunkt på året — för friska växter och en säker, vacker utemiljö.</p>
+          </article>
+
+          <article class="service-card reveal reveal-d2">
+            <img class="service-bg" src="bilder/service-3.jpg"
+                 alt="Plantering av färgglada perenner i en rabatt" loading="lazy">
+            <div class="service-icon" aria-hidden="true">
+              <!-- Planta -->
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20v-8"/><path d="M12 12c0-4 3-7 7-7 0 4-3 7-7 7Z"/><path d="M12 14c0-3-2.2-5-5-5 0 3 2.2 5 5 5Z"/><path d="M5 20h14"/></svg>
+            </div>
+            <h3>Plantering &amp; anläggning</h3>
+            <p>Nyanläggning av rabatter, plantering av träd, buskar och perenner samt läggning av gräsmattor. Vi skapar utemiljöer som håller över tid.</p>
+          </article>
+
+          <article class="service-card reveal">
+            <img class="service-bg" src="bilder/service-4.jpg"
+                 alt="Höststrädning med kratta och lövhög på gräsmattan" loading="lazy">
+            <div class="service-icon" aria-hidden="true">
+              <!-- Löv -->
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20c8 0 16-4 16-14-6 0-14 2-15 10"/><path d="M4 20c0-3 1-7 5-10"/></svg>
+            </div>
+            <h3>Höst- &amp; vårstädning</h3>
+            <p>Lövupptagning, grus- och sandsopning, rensning av rabatter och iordningställande inför säsongen. Vi gör trädgården redo — vår som höst.</p>
+          </article>
+
+          <article class="service-card reveal reveal-d1">
+            <img class="service-bg" src="bilder/service-5.jpg"
+                 alt="Snöröjning av en gångväg vintertid" loading="lazy">
+            <div class="service-icon" aria-hidden="true">
+              <!-- Snöflinga -->
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M4 6l16 12M20 6 4 18"/><path d="m9 4 3 2 3-2M9 20l3-2 3 2M3.5 9l3.2 1.2L7 13.5M20.5 9l-3.2 1.2.3 3.3M3.5 15l3.2-1.2L7 10.5M20.5 15l-3.2-1.2.3-3.3"/></svg>
+            </div>
+            <h3>Snöröjning &amp; halkbekämpning</h3>
+            <p>Vintertjänst med snöröjning, skottning och halkbekämpning för fastigheter och BRF:er. Trygga gångvägar och entréer hela vintern.</p>
+          </article>
+
+          <article class="service-card reveal reveal-d2">
+            <img class="service-bg" src="bilder/service-6.jpg"
+                 alt="Välskött gårdsmiljö utanför ett flerbostadshus (BRF)" loading="lazy">
+            <div class="service-icon" aria-hidden="true">
+              <!-- Avtal/dokument -->
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7Z"/><path d="M14 2v5h5"/><path d="m9 15 2 2 4-4"/></svg>
+            </div>
+            <h3>Skötselavtal för BRF &amp; fastighetsbolag</h3>
+            <p>Skräddarsydda årsavtal med fast pris, en dedikerad kontaktperson och regelbunden återkoppling. Bekymmersfri utemiljö året om.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== VARFÖR VÄLJA OSS ==================== -->
+    <section class="why" aria-labelledby="why-title">
+      <!-- dekorativt blad -->
+      <svg class="why-leaf" viewBox="0 0 24 24" fill="#A8BFA0" aria-hidden="true"><path d="M4 20c8 0 16-4 16-14-6 0-14 2-15 10-.6 1.5-1 2.8-1 4Z"/></svg>
+      <div class="container">
+        <div class="reveal">
+          <span class="section-eyebrow">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.6 6.6L21 9.3l-5 4.4 1.5 6.8L12 16.9 6.5 20.5 8 13.7 3 9.3l6.4-.7L12 2z"/></svg>
+            Varför välja oss
+          </span>
+          <h2 class="section-title" id="why-title">En partner ni kan lita på</h2>
+          <p class="section-intro">
+            Vi bygger långsiktiga relationer med våra kunder — många har varit med oss sedan starten 2005.
+          </p>
+        </div>
+
+        <div class="why-grid">
+          <div class="why-item reveal">
+            <div class="why-number">20+</div>
+            <h3>År av erfarenhet</h3>
+            <p>Grundat 2005. Två decennier av trädgårdar, parker och fastighetsmark i Stockholmsområdet.</p>
+          </div>
+          <div class="why-item reveal reveal-d1">
+            <div class="why-number">17</div>
+            <h3>Utbildade medarbetare</h3>
+            <p>Ett erfaret team med rätt kompetens och rätt maskiner — vi klarar även stora uppdrag.</p>
+          </div>
+          <div class="why-item reveal reveal-d2">
+            <div class="why-number">100%</div>
+            <h3>Fasta priser &amp; avtal</h3>
+            <p>Tydliga offerter utan överraskningar. Skötselavtal med fast årspris för full förutsägbarhet.</p>
+          </div>
+          <div class="why-item reveal reveal-d3">
+            <div class="why-number">Trygg</div>
+            <h3>Fullt försäkrade</h3>
+            <p>Ansvarsförsäkring, F-skatt och momsregistrering. Allt arbete utförs tryggt och korrekt.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SÅ FUNKAR DET ==================== -->
+    <section class="steps" aria-labelledby="steps-title">
+      <div class="container">
+        <div class="reveal">
+          <span class="section-eyebrow">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            Så funkar det
+          </span>
+          <h2 class="section-title" id="steps-title">Från förfrågan till grönskande resultat</h2>
+          <p class="section-intro">Enkelt, tydligt och utan förpliktelser — så här kommer vi igång tillsammans.</p>
+        </div>
+
+        <div class="steps-grid">
+          <div class="step-card reveal">
+            <div class="step-num" aria-hidden="true">1</div>
+            <h3>Kontakta oss</h3>
+            <p>Ring, mejla eller fyll i formuläret. Berätta kort om din trädgård eller fastighet och vad du behöver hjälp med.</p>
+          </div>
+          <div class="step-card reveal reveal-d1">
+            <div class="step-num" aria-hidden="true">2</div>
+            <h3>Kostnadsfri besiktning &amp; offert</h3>
+            <p>Vi besöker platsen, går igenom behoven tillsammans med dig och lämnar en tydlig offert med fast pris.</p>
+          </div>
+          <div class="step-card reveal reveal-d2">
+            <div class="step-num" aria-hidden="true">3</div>
+            <h3>Vi sätter igång</h3>
+            <p>Vårt team påbörjar arbetet på avtalad tid. Du får en kontaktperson och löpande återkoppling under hela uppdraget.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== REFERENSER ==================== -->
+    <!--
+      OBS! PLACEHOLDER-CITAT nedan — ersätt med riktiga kundcitat
+      (namn, roll och förening/företag) innan lansering.
+    -->
+    <section id="referenser" aria-labelledby="ref-title">
+      <div class="container">
+        <div class="reveal">
+          <span class="section-eyebrow">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21s-7-4.6-9.5-9A5.5 5.5 0 0 1 12 6.3 5.5 5.5 0 0 1 21.5 12c-2.5 4.4-9.5 9-9.5 9Z"/></svg>
+            Referenser
+          </span>
+          <h2 class="section-title" id="ref-title">Vad våra kunder säger</h2>
+          <p class="section-intro">Långa samarbeten och nöjda kunder är vårt bästa betyg.</p>
+        </div>
+
+        <div class="testimonials-grid">
+          <!-- PLACEHOLDER: ersätt med riktigt citat -->
+          <figure class="testimonial reveal">
+            <div class="stars" aria-label="Betyg: 5 av 5 stjärnor">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.6 6.6L21 9.3l-5 4.4 1.5 6.8L12 16.9 6.5 20.5 8 13.7 3 9.3l6.4-.7L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.6 6.6L21 9.3l-5 4.4 1.5 6.8L12 16.9 6.5 20.5 8 13.7 3 9.3l6.4-.7L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.6 6.6L21 9.3l-5 4.4 1.5 6.8L12 16.9 6.5 20.5 8 13.7 3 9.3l6.4-.7L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.6 6.6L21 9.3l-5 4.4 1.5 6.8L12 16.9 6.5 20.5 8 13.7 3 9.3l6.4-.7L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.6 6.6L21 9.3l-5 4.4 1.5 6.8L12 16.9 6.5 20.5 8 13.7 3 9.3l6.4-.7L12 2z"/></svg>
+            </div>
+            <blockquote>
+              SS Trädgårdsservice har skött vår förenings utemiljö i flera år. Alltid punktliga,
+              proffsiga och lätta att nå. Gården har aldrig sett bättre ut — och styrelsen
+              slipper tänka på det.
+            </blockquote>
+            <figcaption>
+              <span class="avatar" aria-hidden="true">ML</span>
+              <div>
+                <cite>Maria Lindqvist</cite>
+                <span class="role">Ordförande, BRF i Solna</span>
+              </div>
+            </figcaption>
+          </figure>
+
+          <!-- PLACEHOLDER: ersätt med riktigt citat -->
+          <figure class="testimonial reveal reveal-d1">
+            <div class="stars" aria-label="Betyg: 5 av 5 stjärnor">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.6 6.6L21 9.3l-5 4.4 1.5 6.8L12 16.9 6.5 20.5 8 13.7 3 9.3l6.4-.7L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.6 6.6L21 9.3l-5 4.4 1.5 6.8L12 16.9 6.5 20.5 8 13.7 3 9.3l6.4-.7L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.6 6.6L21 9.3l-5 4.4 1.5 6.8L12 16.9 6.5 20.5 8 13.7 3 9.3l6.4-.7L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.6 6.6L21 9.3l-5 4.4 1.5 6.8L12 16.9 6.5 20.5 8 13.7 3 9.3l6.4-.7L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.6 6.6L21 9.3l-5 4.4 1.5 6.8L12 16.9 6.5 20.5 8 13.7 3 9.3l6.4-.7L12 2z"/></svg>
+            </div>
+            <blockquote>
+              De beskar våra gamla äppelträd och anlade en ny rabatt. Kunnigt, noggrant och
+              prisvärt — och de städade fint efter sig. Rekommenderas varmt!
+            </blockquote>
+            <figcaption>
+              <span class="avatar" aria-hidden="true">JB</span>
+              <div>
+                <cite>Johan Bergström</cite>
+                <span class="role">Villaägare, Solna</span>
+              </div>
+            </figcaption>
+          </figure>
+
+          <!-- PLACEHOLDER: ersätt med riktigt citat -->
+          <figure class="testimonial reveal reveal-d2">
+            <div class="stars" aria-label="Betyg: 5 av 5 stjärnor">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.6 6.6L21 9.3l-5 4.4 1.5 6.8L12 16.9 6.5 20.5 8 13.7 3 9.3l6.4-.7L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.6 6.6L21 9.3l-5 4.4 1.5 6.8L12 16.9 6.5 20.5 8 13.7 3 9.3l6.4-.7L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.6 6.6L21 9.3l-5 4.4 1.5 6.8L12 16.9 6.5 20.5 8 13.7 3 9.3l6.4-.7L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.6 6.6L21 9.3l-5 4.4 1.5 6.8L12 16.9 6.5 20.5 8 13.7 3 9.3l6.4-.7L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.6 6.6L21 9.3l-5 4.4 1.5 6.8L12 16.9 6.5 20.5 8 13.7 3 9.3l6.4-.7L12 2z"/></svg>
+            </div>
+            <blockquote>
+              Vi har skötselavtal på tre fastigheter, inklusive snöröjning vintertid. Ett
+              samarbete som bara fungerar — snabb återkoppling och alltid utfört i tid.
+            </blockquote>
+            <figcaption>
+              <span class="avatar" aria-hidden="true">AN</span>
+              <div>
+                <cite>Anders Nyström</cite>
+                <span class="role">Fastighetsförvaltare, Stockholm</span>
+              </div>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== OM OSS ==================== -->
+    <section class="about" id="om-oss" aria-labelledby="om-title">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-media reveal">
+            <!-- OM OSS-BILD: bilder/about.jpg (byt filen för att uppdatera bilden) -->
+            <img id="about-img" src="bilder/about.jpg"
+                 alt="Trädgårdsteamet från SS Trädgårdsservice i arbete i en villaträdgård"
+                 loading="lazy" width="800" height="600">
+          </div>
+          <div class="about-text reveal reveal-d1">
+            <span class="section-eyebrow">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C7 6 4 10.5 4 14.5A8 8 0 0 0 12 22a8 8 0 0 0 8-7.5C20 10.5 17 6 12 2Z"/></svg>
+              Om oss
+            </span>
+            <h2 class="section-title" id="om-title">Ett familjeföretag med rötterna i Solna</h2>
+            <p>
+              SS Trädgårdsservice AB grundades 2005 som ett litet familjeföretag med en enkel idé:
+              att sköta trädgårdar med samma omsorg som om de vore våra egna. I dag är vi
+              17 medarbetare — men känslan är densamma.
+            </p>
+            <p>
+              Vi är lokalt förankrade i Solna och arbetar i hela Storstockholm. Våra kunder är
+              allt från bostadsrättsföreningar och fastighetsbolag till företag och villaägare.
+              Många har varit med oss i över tio år, och det är vi stolta över.
+            </p>
+            <p>
+              Oavsett om det gäller ett löpande skötselavtal eller en engångsinsats får du alltid
+              samma sak av oss: kunnigt hantverk, tydlig kommunikation och ett resultat som håller.
+            </p>
+            <div class="about-badges">
+              <span class="badge-pill">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                F-skatt &amp; momsregistrerad
+              </span>
+              <span class="badge-pill">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                Grundat 2005 — 20+ år i branschen
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CTA-BAND ==================== -->
+    <section class="cta-band" aria-labelledby="cta-title">
+      <svg class="leaf-l" viewBox="0 0 24 24" fill="#A8BFA0" aria-hidden="true"><path d="M4 20c8 0 16-4 16-14-6 0-14 2-15 10-.6 1.5-1 2.8-1 4Z"/></svg>
+      <svg class="leaf-r" viewBox="0 0 24 24" fill="#A8BFA0" aria-hidden="true"><path d="M4 20c8 0 16-4 16-14-6 0-14 2-15 10-.6 1.5-1 2.8-1 4Z"/></svg>
+      <div class="container reveal">
+        <h2 id="cta-title">Redo att ge din trädgård den omsorg den förtjänar?</h2>
+        <p>Kostnadsfri besiktning och offert — utan förpliktelser. Vi återkommer inom en arbetsdag.</p>
+        <a href="#kontakt" class="btn btn-primary">
+          Begär offert
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- ==================== KONTAKT ==================== -->
+    <section id="kontakt" aria-labelledby="kontakt-title">
+      <div class="container">
+        <div class="reveal">
+          <span class="section-eyebrow">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v16H4z" opacity="0"/><path d="m22 6-10 7L2 6"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+            Kontakt
+          </span>
+          <h2 class="section-title" id="kontakt-title">Begär en kostnadsfri offert</h2>
+          <p class="section-intro">
+            Fyll i formuläret så återkommer vi inom en arbetsdag — eller ring oss direkt på
+            <a href="tel:+46733320653" style="font-weight:600; white-space:nowrap;">073-332 06 53</a>.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <!--
+            FORMULÄR-BACKEND:
+            Formuläret öppnar som fallback användarens e-postklient (mailto:).
+            PRODUKTION: ersätt mailto-fallbacken i handleSubmit() (se skriptet längst
+            ned) med en riktig endpoint, t.ex. Formspree, Netlify Forms eller egen
+            POST till /api/kontakt.
+          -->
+          <form class="contact-form reveal" id="contactForm" novalidate>
+            <div class="form-row two">
+              <div class="field">
+                <label for="f-name">Namn *</label>
+                <input type="text" id="f-name" name="namn" autocomplete="name" required aria-describedby="err-name">
+                <p class="field-error" id="err-name">Vänligen ange ditt namn.</p>
+              </div>
+              <div class="field">
+                <label for="f-email">E-post *</label>
+                <input type="email" id="f-email" name="epost" autocomplete="email" required aria-describedby="err-email">
+                <p class="field-error" id="err-email">Vänligen ange en giltig e-postadress.</p>
+              </div>
+            </div>
+
+            <div class="form-row two">
+              <div class="field">
+                <label for="f-phone">Telefon</label>
+                <input type="tel" id="f-phone" name="telefon" autocomplete="tel">
+              </div>
+              <div class="field">
+                <label for="f-service">Vilken tjänst gäller det? *</label>
+                <select id="f-service" name="tjanst" required aria-describedby="err-service">
+                  <option value="">Välj tjänst…</option>
+                  <option>Trädgårdsskötsel &amp; underhåll</option>
+                  <option>Beskärning &amp; trädvård</option>
+                  <option>Plantering &amp; anläggning</option>
+                  <option>Höst- &amp; vårstädning</option>
+                  <option>Snöröjning &amp; halkbekämpning</option>
+                  <option>Skötselavtal (BRF/fastighetsbolag)</option>
+                  <option>Annat</option>
+                </select>
+                <p class="field-error" id="err-service">Vänligen välj en tjänst.</p>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="field">
+                <label for="f-message">Meddelande *</label>
+                <textarea id="f-message" name="meddelande" required aria-describedby="err-message" placeholder="Berätta kort om din trädgård eller fastighet och vad du behöver hjälp med…"></textarea>
+                <p class="field-error" id="err-message">Vänligen skriv ett meddelande.</p>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary" id="submitBtn">
+              Skicka förfrågan
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+            </button>
+
+            <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+          </form>
+
+          <div class="contact-aside">
+            <div class="contact-card reveal reveal-d1">
+              <h3>Kontaktuppgifter</h3>
+              <ul class="contact-list">
+                <li>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                  <span>Virebergsvägen 15<span class="sub">169 30 Solna</span></span>
+                </li>
+                <li>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  <span><a href="tel:+46733320653">073-332 06 53</a><span class="sub">Vardagar 07–16</span></span>
+                </li>
+                <li>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+                  <!-- E-POST PLACEHOLDER: byt till företagets riktiga adress -->
+                  <span><a href="mailto:info@sstradgardsservice.se">info@sstradgardsservice.se</a></span>
+                </li>
+                <li>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7Z"/><path d="M14 2v5h5"/></svg>
+                  <span>Org.nr 556690-4784<span class="sub">F-skatt &amp; momsregistrerad</span></span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="map-wrap reveal reveal-d2">
+              <iframe
+                src="https://maps.google.com/maps?q=Virebergsv%C3%A4gen%2015%2C%20169%2030%20Solna&z=15&output=embed"
+                title="Karta: Virebergsvägen 15, Solna"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="#top" class="brand">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 2C7 6 4 10.5 4 14.5A8 8 0 0 0 12 22a8 8 0 0 0 8-7.5C20 10.5 17 6 12 2Z" fill="#A8BFA0"/>
+              <path d="M12 7v12M12 11l3.5-2.5M12 14.5 8.5 12" stroke="#0F2A17" stroke-width="1.4" stroke-linecap="round"/>
+            </svg>
+            SS Trädgårdsservice
+          </a>
+          <p>Professionell trädgårdsskötsel i Solna och Stockholm sedan 2005. Familjeföretag med 17 medarbetare.</p>
+        </div>
+
+        <div>
+          <h3>Kontakt</h3>
+          <ul>
+            <li>Virebergsvägen 15, 169 30 Solna</li>
+            <li><a href="tel:+46733320653">073-332 06 53</a></li>
+            <li><a href="mailto:info@sstradgardsservice.se">info@sstradgardsservice.se</a></li>
+            <li>Org.nr 556690-4784</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Öppettider</h3>
+          <ul>
+            <li>Måndag–fredag: 07:00–16:00</li>
+            <li>Lördag–söndag: Stängt</li>
+            <li>Vinterjour: enligt avtal</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Genvägar</h3>
+          <ul>
+            <li><a href="#tjanster">Tjänster</a></li>
+            <li><a href="#om-oss">Om oss</a></li>
+            <li><a href="#referenser">Referenser</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© <span id="year">2026</span> SS Trädgårdsservice AB. Alla rättigheter förbehållna.</span>
+        <span>F-skatt &amp; momsregistrerad · Grundat 2005</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      "use strict";
+
+      /* ---------- Header-skugga vid scroll ---------- */
+      var header = document.getElementById("header");
+      window.addEventListener("scroll", function () {
+        header.classList.toggle("is-scrolled", window.scrollY > 8);
+      }, { passive: true });
+
+      /* ---------- Mobilmeny ---------- */
+      var toggle = document.getElementById("navToggle");
+      var nav = document.getElementById("mainNav");
+      var iconMenu = document.getElementById("iconMenu");
+      var iconClose = document.getElementById("iconClose");
+
+      function setMenu(open) {
+        nav.classList.toggle("is-open", open);
+        toggle.setAttribute("aria-expanded", String(open));
+        toggle.setAttribute("aria-label", open ? "Stäng menyn" : "Öppna menyn");
+        iconMenu.style.display = open ? "none" : "block";
+        iconClose.style.display = open ? "block" : "none";
+      }
+
+      toggle.addEventListener("click", function () {
+        setMenu(!nav.classList.contains("is-open"));
+      });
+
+      /* Stäng menyn när en länk klickas */
+      nav.addEventListener("click", function (e) {
+        if (e.target.tagName === "A") setMenu(false);
+      });
+
+      /* Stäng menyn med Escape */
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" && nav.classList.contains("is-open")) {
+          setMenu(false);
+          toggle.focus();
+        }
+      });
+
+      /* ---------- Scroll-reveal (IntersectionObserver) ---------- */
+      var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      var revealEls = document.querySelectorAll(".reveal");
+
+      if (reduceMotion || !("IntersectionObserver" in window)) {
+        revealEls.forEach(function (el) { el.classList.add("is-visible"); });
+      } else {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              io.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+        revealEls.forEach(function (el) { io.observe(el); });
+      }
+
+      /* ---------- Formulärvalidering + mailto-fallback ---------- */
+      var form = document.getElementById("contactForm");
+      var status = document.getElementById("formStatus");
+
+      function fieldWrap(input) { return input.closest(".field"); }
+
+      function validateField(input) {
+        var ok = true;
+        var val = input.value.trim();
+        if (input.hasAttribute("required") && !val) ok = false;
+        if (ok && input.type === "email" && val) {
+          ok = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(val);
+        }
+        fieldWrap(input).classList.toggle("has-error", !ok);
+        return ok;
+      }
+
+      /* Realtidsvalidering när fältet lämnas */
+      form.querySelectorAll("input, select, textarea").forEach(function (input) {
+        input.addEventListener("blur", function () { validateField(input); });
+        input.addEventListener("input", function () {
+          if (fieldWrap(input).classList.contains("has-error")) validateField(input);
+        });
+      });
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        handleSubmit();
+      });
+
+      function handleSubmit() {
+        var inputs = form.querySelectorAll("input, select, textarea");
+        var allValid = true;
+        var firstInvalid = null;
+
+        inputs.forEach(function (input) {
+          if (!validateField(input) && !firstInvalid) {
+            allValid = false;
+            firstInvalid = input;
+          } else if (fieldWrap(input).classList.contains("has-error")) {
+            allValid = false;
+          }
+        });
+
+        if (!allValid) {
+          if (firstInvalid) firstInvalid.focus();
+          return;
+        }
+
+        /* ============================================================
+           PRODUKTION: byt ut mailto-fallbacken nedan mot en riktig
+           endpoint, t.ex.:
+
+           fetch("/api/kontakt", {
+             method: "POST",
+             headers: { "Content-Type": "application/json" },
+             body: JSON.stringify(Object.fromEntries(new FormData(form)))
+           }).then(...);
+
+           Alternativ utan egen server: Formspree, Basin, Netlify Forms.
+           ============================================================ */
+        var name = document.getElementById("f-name").value.trim();
+        var email = document.getElementById("f-email").value.trim();
+        var phone = document.getElementById("f-phone").value.trim();
+        var service = document.getElementById("f-service").value;
+        var message = document.getElementById("f-message").value.trim();
+
+        var subject = "Offertförfrågan: " + service;
+        var body =
+          "Namn: " + name + "\n" +
+          "E-post: " + email + "\n" +
+          "Telefon: " + (phone || "-") + "\n" +
+          "Tjänst: " + service + "\n\n" +
+          "Meddelande:\n" + message;
+
+        /* E-POST PLACEHOLDER: byt till företagets riktiga adress */
+        window.location.href = "mailto:info@sstradgardsservice.se" +
+          "?subject=" + encodeURIComponent(subject) +
+          "&body=" + encodeURIComponent(body);
+
+        status.textContent = "Tack! Din e-postklient öppnas nu — skicka meddelandet för att slutföra din förfrågan.";
+        status.classList.add("success");
+      }
+
+      /* ---------- Årtal i footern ---------- */
+      document.getElementById("year").textContent = new Date().getFullYear();
+    })();
+  </script>
+</body>
+</html>
