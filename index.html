@@ -230,6 +230,24 @@
       .header-cta .btn { padding: .6rem .8rem; }
     }
 
+    /* ---------- Små telefoner (≤ 420px) ---------- */
+    @media (max-width: 420px) {
+      /* Förhindra att logotypen trängs ihop med knapparna */
+      .brand { font-size: 1.12rem; gap: .45rem; }
+      .brand svg { width: 26px; height: 26px; }
+
+      /* Fullbredds-knappar = större, säkrare tryckyta */
+      .hero-actions { gap: .75rem; }
+      .hero-actions .btn { width: 100%; }
+      #submitBtn { width: 100%; }
+
+      /* Luftigare men inte för hög hero på korta skärmar */
+      .hero { padding: calc(var(--header-h) + 1.5rem) 0 5rem; }
+
+      /* Mindre inre marginal på kort så texten får plats */
+      .service-card, .step-card, .testimonial, .contact-card { padding-left: 1.35rem; padding-right: 1.35rem; }
+    }
+
     /* ============================================================
        HERO
        ============================================================ */
@@ -285,7 +303,7 @@
     .services { background: var(--cream); }
     .services-grid {
       display: grid; gap: 1.5rem; margin-top: 3rem;
-      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 290px), 1fr));
     }
     .service-card {
       position: relative; overflow: hidden; isolation: isolate;
@@ -325,7 +343,7 @@
     .why .section-intro { color: rgba(250,248,243,.8); }
     .why-grid {
       display: grid; gap: 2rem; margin-top: 3.25rem;
-      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr));
     }
     .why-item { border-top: 2px solid rgba(168,191,160,.4); padding-top: 1.5rem; }
     .why-number {
@@ -344,7 +362,7 @@
     .steps { background: var(--cream-dark); }
     .steps-grid {
       display: grid; gap: 1.5rem; margin-top: 3rem; counter-reset: step;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
     }
     .step-card {
       background: var(--white); border-radius: var(--radius-lg);
@@ -365,7 +383,7 @@
        ============================================================ */
     .testimonials-grid {
       display: grid; gap: 1.5rem; margin-top: 3rem;
-      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 290px), 1fr));
     }
     .testimonial {
       background: var(--white); border-radius: var(--radius-lg);
@@ -489,7 +507,7 @@
     .site-footer { background: var(--green-deep); color: rgba(250,248,243,.8); padding: 4rem 0 2rem; }
     .footer-grid {
       display: grid; gap: 2.5rem; margin-bottom: 3rem;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
     }
     .site-footer h3 { color: #fff; font-size: 1.05rem; font-family: var(--font-body); font-weight: 700; margin-bottom: 1rem; letter-spacing: .02em; }
     .site-footer .brand { color: #fff; margin-bottom: .75rem; }
